@@ -10,15 +10,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.cosurf.model.surfspots
 import com.example.cosurf.ui.theme.CosurfTheme
-import com.example.cosurf.view.SpotList
+import com.example.cosurf.model.surfspots
+import com.example.cosurf.view.AllSurfSpots
+import com.example.cosurf.view.SurfSpotCard
+//import com.example.cosurf.view.SpotList
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             CosurfTheme {
-                SpotList()
+                AllSurfSpots(surfspots)
+                //SpotList()
 
             }
         }
@@ -31,7 +36,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     CosurfTheme {
-        SpotList()
+        AllSurfSpots(surfspots)
+        //SpotList()
 
     }
 }

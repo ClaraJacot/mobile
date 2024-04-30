@@ -20,9 +20,11 @@ import androidx.compose.ui.unit.dp
 import kotlin.random.Random
 
 @Composable
-fun SpotItem(fullName: String) {
+fun SpotItem(fullName: String, address: String) {
     Row(verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth().clickable {  }
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { }
     ) {
         Box(modifier = Modifier
             .size(50.dp)
@@ -40,12 +42,18 @@ fun SpotItem(fullName: String) {
             text = fullName,
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold)
-
+        Text(
+            text = address,
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.SemiBold
+        )
     }
 }
 
 @Preview(showSystemUi = true)
 @Composable
 fun SpotItemPreview() {
-    SpotItem(fullName = "Clara Bonjour")
+    SpotItem(
+        fullName = "Reef Break ",
+        address = "Pipeline, Oahu, Hawaii")
 }

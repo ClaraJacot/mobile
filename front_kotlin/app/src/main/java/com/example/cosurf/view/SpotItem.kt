@@ -95,7 +95,7 @@ fun SpotItemPreview (){
     val surfSpot = SurfSpot(
         name = "Nom du spot",
         address = "Adresse du spot",
-        id = 3,
+        id = "3",
         picture = ""
     )
 

@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-}
+    kotlin("plugin.serialization") version "1.9.23"}
 
 android {
     namespace = "com.example.cosurf"
@@ -63,6 +63,8 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.ui)
     implementation(libs.androidx.material3.android)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.org.jetbrains.kotlin.plugin.serialization.gradle.plugin)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

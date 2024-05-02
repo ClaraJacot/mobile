@@ -26,7 +26,7 @@ fun SurfSpotCard(
     name: String,
     picture: String,
     address: String,
-    id: Int,
+    id: String,
     onClick: () -> Unit
 ) {
     Card(
@@ -79,7 +79,7 @@ fun SurfSpotCardPreview (){
         name = "Bonjour",
         picture = "",
         address = "Ici",
-        id = 3,
+        id = "3",
         onClick = {}
     )
 }

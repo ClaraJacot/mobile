@@ -58,19 +58,19 @@ fun AllSurfSpotsPreview() {
         SurfSpot(
             name = "Spot 1",
             address = "Adresse du spot",
-            id = 1,
+            id = "1",
             picture = ""
         ),
         SurfSpot(
             name = "Spot 2",
             address = "Adresse du spot",
-            id = 2,
+            id = "2",
             picture = ""
         ),
         SurfSpot(
             name = "Spot 3",
             address = "Adresse du spot",
-            id = 3,
+            id = "3",
             picture = ""
         )
 

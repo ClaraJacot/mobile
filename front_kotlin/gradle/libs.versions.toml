@@ -13,6 +13,8 @@ navigationCompose = "2.8.0-alpha07"
 material = "1.7.0-alpha07"
 ui = "1.7.0-alpha07"
 material3Android = "1.2.1"
+kotlinxSerializationJson = "1.6.3"
+orgJetbrainsKotlinPluginSerializationGradlePlugin = "2.0.0-RC2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +36,8 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 androidx-material = { group = "androidx.compose.material", name = "material", version.ref = "material" }
 ui = { group = "androidx.compose.ui", name = "ui", version.ref = "ui" }
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+org-jetbrains-kotlin-plugin-serialization-gradle-plugin = { group = "org.jetbrains.kotlin.plugin.serialization", name = "org.jetbrains.kotlin.plugin.serialization.gradle.plugin", version.ref = "orgJetbrainsKotlinPluginSerializationGradlePlugin" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,16 +17,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.cosurf.model.data.SurfSpot
+import com.example.cosurf.model.data.Record
 import kotlin.random.Random
 
 @Composable
-fun SpotItem(surfSpot : SurfSpot, onBackClicked: () -> Unit) {
+fun SpotItem(surfSpot : Record, onBackClicked: () -> Unit) {
     Column {
         ScaffoldSurf(
-            title = surfSpot.name,
+            title = surfSpot.id,
             icon = Icons.AutoMirrored.Filled.ArrowBack,
             onIconClicked = onBackClicked
         )
@@ -52,7 +50,7 @@ fun SpotItem(surfSpot : SurfSpot, onBackClicked: () -> Unit) {
            .border(2.dp, Color.Black)
            .background(Color(Random.nextInt()))
         ) {
-            Text(text = surfSpot.picture,
+            Text(text = surfSpot.fields.photos.joinToString(),
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier
                     .align(Alignment.Center)
@@ -61,11 +59,11 @@ fun SpotItem(surfSpot : SurfSpot, onBackClicked: () -> Unit) {
 
             }
         Text(modifier = Modifier.padding(top = 20.dp),
-            text = surfSpot.name,
+            text = surfSpot.fields.surfBreak.joinToString(),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold)
         Text(
-            text = surfSpot.address + surfSpot.id,
+            text = surfSpot.fields.address + surfSpot.id,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold
         )
@@ -89,7 +87,7 @@ fun SpotItem(surfSpot : SurfSpot, onBackClicked: () -> Unit) {
 
 }
 
-@Preview (showBackground = true, showSystemUi = true)
+/*@Preview (showBackground = true, showSystemUi = true)
 @Composable
 fun SpotItemPreview (){
     val surfSpot = SurfSpot(
@@ -100,5 +98,5 @@ fun SpotItemPreview (){
     )
 
     SpotItem(surfSpot = surfSpot, onBackClicked = {})
-}
+}*/
 

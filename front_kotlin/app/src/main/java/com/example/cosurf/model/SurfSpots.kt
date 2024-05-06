@@ -1,7 +1,8 @@
 package com.example.cosurf.model
 import kotlinx.serialization.Serializable
-import com.example.cosurf.model.data.SurfSpot
-@Serializable
+
+
+/*@Serializable
 val surfspots = listOf (
     SurfSpot("1","Reef Break","Pipeline, Oahu, Hawaii", "urlimage"),
     SurfSpot("2", "Point Break","Supertubes, Jeffreys Bay, South Africa","urlimage"),
@@ -13,4 +14,4 @@ val surfspots = listOf (
     SurfSpot("8","Point Break","Supertubes, Jeffreys Bay, South Africa","urlimage"),
     SurfSpot("9","Killer Shark ","Superbank, Gold Coast, Australia", "urlimage"),
     SurfSpot("10","Reef Break","Pipeline, Oahu, Hawaii", "urlimage"),
-)
+)*/

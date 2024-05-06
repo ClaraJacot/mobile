@@ -7,13 +7,10 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.cosurf.model.data.Records
-import com.example.cosurf.model.data.SurfSpot
+import com.example.cosurf.model.data.Welcome
 import com.example.cosurf.model.jsonSurf
-import com.example.cosurf.model.surfspots
 import com.example.cosurf.ui.theme.CosurfTheme
 import com.example.cosurf.view.AllSurfSpots
-import com.example.cosurf.view.ScaffoldSurf
 import com.example.cosurf.view.SpotItem
 import kotlinx.serialization.json.Json
 
@@ -21,14 +18,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val surfSpot = Json.decodeFromString<Records>(jsonSurf)
+            val surfSpot = Json.decodeFromString<Welcome>(jsonSurf)
             Log.d("toto", "$jsonSurf")
             val navController = rememberNavController()
 
             NavHost(navController = navController, startDestination = "allSpots") {
                 composable("allSpots") {
                     CosurfTheme {
-                        AllSurfSpots(navController = navController, platList = surfSpot.records)
+                        AllSurfSpots(navController = navController, welcome = surfSpot)
                     }
                 }
                 composable("spotItem/{spotId}") { backStackEntry ->

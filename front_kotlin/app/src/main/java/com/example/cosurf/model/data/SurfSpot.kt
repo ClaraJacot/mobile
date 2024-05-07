@@ -1,81 +1,80 @@
 package com.example.cosurf.model.data
 
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
 
 @Serializable
 data class Welcome (
-    val records: List<Record>,
-    val offset: String
+    var records: List<Record>
 )
 
 @Serializable
 data class Record (
-    val id: String,
-    val fields: Fields,
-    val createdTime: String
+    var id: String,
+    var fields: Fields,
+    var createdTime: String
 )
 
 @Serializable
 data class Fields (
-    @SerialName("Surf Break")
-    val surfBreak: List<String>,
+    @SerializedName("Surf Break")
+    var surfBreak: List<String>,
 
-    @SerialName("Difficulty Level")
-    val difficultyLevel: Long,
+    @SerializedName("Difficulty Level")
+    var difficultyLevel: Long,
 
-    @SerialName("Destination")
-    val destination: String,
+    @SerializedName("Destination")
+    var destination: String,
 
-    @SerialName("Geocode")
-    val geocode: String,
+    @SerializedName("Geocode")
+    var geocode: String,
 
-    @SerialName("Influencers")
-    val influencers: List<String>,
+    @SerializedName("Influencers")
+    var influencers: List<String>,
 
-    @SerialName("Magic Seaweed Link")
-    val magicSeaweedLink: String,
+    @SerializedName("Magic Seaweed Link")
+    var magicSeaweedLink: String,
 
-    @SerialName("Photos")
-    val photos: List<Photo>,
+    @SerializedName("Photos")
+    var photos: List<Photo>,
 
-    @SerialName("Peak Surf Season Begins")
-    val peakSurfSeasonBegins: String,
+    @SerializedName("Peak Surf Season Begins")
+    var peakSurfSeasonBegins: String,
 
-    @SerialName("Destination State/Country")
-    val destinationStateCountry: String,
+    @SerializedName("Destination State/Country")
+    var destinationStateCountry: String,
 
-    @SerialName("Peak Surf Season Ends")
-    val peakSurfSeasonEnds: String,
+    @SerializedName("Peak Surf Season Ends")
+    var peakSurfSeasonEnds: String,
 
-    @SerialName("Address")
-    val address: String
+    @SerializedName("Address")
+    var address: String
 )
 
 @Serializable
 data class Photo (
-    val id: String,
-    val url: String,
-    val filename: String,
-    val size: Long,
-    val type: String,
-    val thumbnails: Thumbnails
+    var id: String,
+    var url: String,
+    var filename: String,
+    var size: Long,
+    var type: String,
+    var thumbnails: Thumbnails
 )
 
 @Serializable
 data class Thumbnails (
-    val small: Full,
-    val large: Full,
-    val full: Full
+    var small: Full,
+    var large: Full,
+    var full: Full
 )
 
 @Serializable
 data class Full (
-    val url: String,
-    val width: Long,
-    val height: Long
+    var url: String,
+    var width: Long,
+    var height: Long
 )
 
 

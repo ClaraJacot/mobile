@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -27,7 +28,7 @@ import kotlin.random.Random
 fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
     Column {
         ScaffoldSurf(
-            title = surfSpot.id,
+            title = surfSpot.fields.surfBreak.toString(),
             icon = Icons.AutoMirrored.Filled.ArrowBack,
             onIconClicked = onBackClicked
         )
@@ -55,7 +56,7 @@ fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
            AsyncImage(
                model = surfPhoto.url,
                contentDescription = null,
-
+               contentScale = ContentScale.Crop
                )
 
             }
@@ -64,7 +65,7 @@ fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold)
         Text(
-            text = surfSpot.fields.address + surfSpot.id,
+            text = surfSpot.fields.address,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold
         )

@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
 import com.example.cosurf.model.data.Photo
@@ -54,6 +55,7 @@ fun SurfSpotCard(
                 AsyncImage(
                     model = surfPhoto.url,
                     contentDescription = null,
+                    contentScale = ContentScale.Crop
 
                 )
             }

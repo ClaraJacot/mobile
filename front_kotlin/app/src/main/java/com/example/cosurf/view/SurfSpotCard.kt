@@ -19,14 +19,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import coil.compose.AsyncImage
+import com.example.cosurf.model.data.Photo
+import com.example.cosurf.model.data.Record
 import kotlin.random.Random
 
 @Composable
 fun SurfSpotCard(
-    name: String,
-    picture: String,
-    address: String,
-    id: String,
+    surfSpot : Record,
+    surfPhoto : Photo,
     onClick: () -> Unit
 ) {
     Card(
@@ -50,20 +51,20 @@ fun SurfSpotCard(
                     .padding(8.dp)
                     .background(Color(Random.nextInt()))
             ) {
-                Text(
-                    text = picture,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.align(Alignment.Center)
+                AsyncImage(
+                    model = surfPhoto.url,
+                    contentDescription = null,
+
                 )
             }
             Column(Modifier.padding(8.dp)) {
                 Text(
-                    text = name,
+                    text = surfSpot.fields.surfBreak.toString(),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
                 Text(
-                    text = address + id,
+                    text = surfSpot.fields.address,
                     style = MaterialTheme.typography.bodyMedium,
                 )
 
@@ -72,14 +73,4 @@ fun SurfSpotCard(
     }
 }
 
-@Preview
-@Composable
-fun SurfSpotCardPreview (){
-    SurfSpotCard(
-        name = "Bonjour",
-        picture = "",
-        address = "Ici",
-        id = "3",
-        onClick = {}
-    )
-}
+

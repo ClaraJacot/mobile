@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.cosurf.model.data.Photo
+import com.example.cosurf.model.data.Record
 import com.example.cosurf.model.data.Welcome
 
 @Composable
@@ -27,12 +29,10 @@ fun AllSurfSpots(navController: NavController, welcome: Welcome) {
 
         items(welcome.records) { surfSpot ->
             SurfSpotCard(
-                surfSpot.fields.surfBreak.joinToString(),
-                surfSpot.fields.photos.joinToString(),
-                surfSpot.fields.address,
-                surfSpot.id,
+                surfSpot, surfPhoto = surfSpot.fields.photos[0],
             ) { navController.navigate("spotItem/${surfSpot.id}") }
         }
+
     }
     }
 }

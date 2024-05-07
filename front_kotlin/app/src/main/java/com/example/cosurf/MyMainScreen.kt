@@ -26,6 +26,7 @@ fun MyMainScreen(navController: NavHostController, surfSpotState: Welcome?) {
                 CosurfTheme {
                     SpotItem(
                         surfSpot = spot,
+                        surfPhoto = spot.fields.photos[0],
                         onBackClicked = { navController.popBackStack() }
                     )
                 }

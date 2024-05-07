@@ -18,11 +18,13 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
+import com.example.cosurf.model.data.Photo
 import com.example.cosurf.model.data.Record
 import kotlin.random.Random
 
 @Composable
-fun SpotItem(surfSpot : Record, onBackClicked: () -> Unit) {
+fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
     Column {
         ScaffoldSurf(
             title = surfSpot.id,
@@ -50,12 +52,11 @@ fun SpotItem(surfSpot : Record, onBackClicked: () -> Unit) {
            .border(2.dp, Color.Black)
            .background(Color(Random.nextInt()))
         ) {
-            Text(text = surfSpot.fields.photos.joinToString(),
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier
-                    .align(Alignment.Center)
+           AsyncImage(
+               model = surfPhoto.url,
+               contentDescription = null,
 
-            )
+               )
 
             }
         Text(modifier = Modifier.padding(top = 20.dp),

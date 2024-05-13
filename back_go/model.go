@@ -2,17 +2,21 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"time"
 )
 
-func UnmarshalWelcome(data []byte) (Welcome, error) {
-	var r Welcome
-	err := json.Unmarshal(data, &r)
-	return r, err
+func UnmarshalWelcome(data []byte) (*Welcome, error) {
+	var w Welcome
+	err := json.Unmarshal(data, &w)
+	if err != nil {
+		return nil, fmt.Errorf("failed to unmarshal JSON: %w", err)
+	}
+	return &w, nil
 }
 
-func (r *Welcome) Marshal() ([]byte, error) {
-	return json.Marshal(r)
+func (w *Welcome) Marshal() ([]byte, error) {
+	return json.Marshal(*w)
 }
 
 type Welcome struct {

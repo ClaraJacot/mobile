@@ -8,14 +8,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func homeLink(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, GetJson())
-
-}
-
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/", homeLink)
-	fmt.Print("Hello Bonsoir")
+	router.HandleFunc("/spots", getAllSpots)
+	fmt.Print("Gooooooo")
+
 	log.Fatal(http.ListenAndServe(":8080", router))
 }

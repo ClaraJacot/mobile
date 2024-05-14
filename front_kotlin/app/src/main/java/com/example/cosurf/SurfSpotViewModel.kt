@@ -29,7 +29,7 @@ class SurfSpotViewModel : ViewModel() {
             .build()
         val apiService = retrofit.create(ApiService::class.java)
 
-        val result = apiService.fetchSpots(token = "Bearer " + Constants.API_KEY)
+        val result = apiService.fetchSpots()
         Log.d("lol", "$result")
         result.enqueue(object : Callback<Welcome> {
             override fun onResponse(call: Call<Welcome>, response: Response<Welcome>) {
@@ -39,7 +39,7 @@ class SurfSpotViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<Welcome>, t: Throwable) {
-                Log.d("erreur", "erroooooooor")
+                Log.d("erreur", "$t")
 
             }
         })

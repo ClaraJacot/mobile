@@ -49,13 +49,13 @@ fun SurfSpotCard(
             Box(
                 modifier = Modifier
                     .size(130.dp)
-                    .padding(8.dp)
+                    .padding(0.dp)
                     .background(Color(Random.nextInt()))
             ) {
                 AsyncImage(
                     model = surfPhoto.url,
                     contentDescription = null,
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.FillBounds
 
                 )
             }

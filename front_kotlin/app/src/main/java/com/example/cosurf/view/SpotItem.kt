@@ -56,7 +56,7 @@ fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
            AsyncImage(
                model = surfPhoto.url,
                contentDescription = null,
-               contentScale = ContentScale.Crop
+               contentScale = ContentScale.FillBounds
                )
 
             }

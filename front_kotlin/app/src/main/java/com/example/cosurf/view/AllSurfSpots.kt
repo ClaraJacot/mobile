@@ -17,7 +17,7 @@ import com.example.cosurf.model.data.Welcome
 fun AllSurfSpots(navController: NavController, welcome: Welcome) {
     Column {
     ScaffoldSurf(
-        title = "\uD83C\uDFC4\u200D♀\uFE0F Surf Spots",
+        title = "\uD83C\uDFC4\u200D♀\uFE0F Surf Spots \uD83C\uDFC4\uD83C\uDFFE",
         icon = null,
         onIconClicked = null
     )

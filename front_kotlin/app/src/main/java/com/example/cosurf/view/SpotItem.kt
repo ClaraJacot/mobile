@@ -1,12 +1,17 @@
 package com.example.cosurf.view
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.MaterialTheme
@@ -17,6 +22,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -28,7 +37,7 @@ import kotlin.random.Random
 fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
     Column {
         ScaffoldSurf(
-            title = surfSpot.fields.surfBreak.toString(),
+            title = "${surfSpot.fields.surfBreak.joinToString()} \uD83C\uDF0A",
             icon = Icons.AutoMirrored.Filled.ArrowBack,
             onIconClicked = onBackClicked
         )
@@ -56,7 +65,9 @@ fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
            AsyncImage(
                model = surfPhoto.url,
                contentDescription = null,
-               contentScale = ContentScale.FillBounds
+               contentScale = ContentScale.Crop,
+               modifier = Modifier
+                   .fillMaxSize()
                )
 
             }
@@ -65,30 +76,52 @@ fun SpotItem(surfSpot : Record, surfPhoto : Photo, onBackClicked: () -> Unit) {
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold)
         Text(
-            text = surfSpot.fields.address,
+            text = "\uD83E\uDDED ${surfSpot.fields.address}",
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.SemiBold
+        )
+        Text(modifier = Modifier.padding(top = 50.dp),
+            text = "\uD83D\uDCC6 Saison  : du ${surfSpot.fields.peakSurfSeasonBegins} au ${surfSpot.fields.peakSurfSeasonEnds} ",
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold
         )
         Text(modifier = Modifier.padding(top = 20.dp),
-            text = "Description :",
+            text = "\uD83E\uDD88 Nombre de requins : ${surfSpot.fields.difficultyLevel}",
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold
         )
-        Text(modifier = Modifier.padding(top = 20.dp),
-            text = "Nombre de requins :",
-            style = MaterialTheme.typography.bodyMedium,
-            fontWeight = FontWeight.SemiBold
-        )
-        Text(modifier = Modifier.padding(top = 20.dp),
-            text = "Température de l'eau :",
-            style = MaterialTheme.typography.bodyMedium,
-            fontWeight = FontWeight.SemiBold
-        )
-    }
-    }
+        ClickableWebText(url = surfSpot.fields.magicSeaweedLink, text = "\uD83D\uDD17 Lien Magic Sea Weed")
+        /*Text(modifier = Modifier.padding(top = 20.dp),
 
+            style = MaterialTheme.typography.bodyMedium,
+
+        )*/
+    }
+    }
+}@Composable
+fun ClickableWebText(url: String, text: String){
+    val context = LocalContext.current
+
+    Text(
+        modifier = Modifier
+            .padding(top = 20.dp)
+            .clickable {
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                context.startActivity(intent)
+            },
+        text = buildAnnotatedString {
+            append(text)
+
+        },
+
+        style = MaterialTheme.typography.bodyMedium,
+        fontWeight = FontWeight.SemiBold,
+        color = Color.Blue
+
+        )
 }
-
+//LinkAnnotation.Url("${surfSpot.fields.magicSeaweedLink}")
 /*@Preview (showBackground = true, showSystemUi = true)
 @Composable
 fun SpotItemPreview (){

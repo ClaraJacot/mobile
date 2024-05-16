@@ -9,9 +9,8 @@ import (
 )
 
 func main() {
-	router := mux.NewRouter()
+	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/spots", getAllSpots).Methods("GET")
-	router.HandleFunc("/spots/{id}", getOneSpot).Methods("GET")
 
 	fmt.Print("Gooooooo")
 

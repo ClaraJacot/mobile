@@ -19,7 +19,8 @@ fun AllSurfSpots(navController: NavController, welcome: Welcome) {
     ScaffoldSurf(
         title = "\uD83C\uDFC4\u200D♀\uFE0F Surf Spots \uD83C\uDFC4\uD83C\uDFFE",
         icon = null,
-        onIconClicked = null
+        onIconClicked = null,
+        onAddClicked = { navController.navigate("AddSpotForm") }
     )
 
     LazyColumn(

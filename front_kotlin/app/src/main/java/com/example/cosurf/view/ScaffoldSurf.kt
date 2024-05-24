@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -20,7 +21,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 fun ScaffoldSurf(
     title: String,
     icon: (ImageVector)? = null,
-    onIconClicked: (() -> Unit)? = null
+    onIconClicked: (() -> Unit)? = null,
+    onAddClicked: (() -> Unit)? = null
 ) {
     TopAppBar(
         title = {
@@ -36,6 +38,13 @@ fun ScaffoldSurf(
             } else {
 
                 Spacer(modifier = Modifier.width(IconSize))
+            }
+        },
+        actions = {
+            if (onAddClicked != null) {
+                IconButton(onClick = { onAddClicked() }) {
+                    Icon(Icons.Default.Add, contentDescription = "Ajouter")
+                }
             }
         },
         backgroundColor = MaterialTheme.colorScheme.primary,

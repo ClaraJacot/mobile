@@ -2,7 +2,7 @@
     "records": [
         {
             "id": "rec5aF9TjMjBicXCK",
-            "createdTime": "2018-05-31T00:16:16.000Z",
+            "createdTime": "2018-05-31T00:16:16Z",
             "fields": {
                 "Surf Break": [
                     "Reef Break"
@@ -51,7 +51,7 @@
         },
         {
             "id": "rec9PEdQnHN6op38J",
-            "createdTime": "2018-05-31T00:51:11.000Z",
+            "createdTime": "2018-05-31T00:51:11Z",
             "fields": {
                 "Surf Break": [
                     "Point Break"
@@ -70,7 +70,7 @@
                         "id": "attw1P2npyb2BdUwL",
                         "width": 3648,
                         "height": 2432,
-                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJDFUC7HRqFF0Fb25_jSbx-UGfSD-3ILFeJ3lWmbURRg&s",
+                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJDFUC7HRqFF0Fb25_jSbx-UGfSD-3ILFeJ3lWmbURRg\u0026s",
                         "filename": "cesar-couto-477018-unsplash (1).jpg",
                         "size": 3066389,
                         "type": "image/jpeg",
@@ -101,7 +101,7 @@
         },
         {
             "id": "recFSodUeBbKL6jhY",
-            "createdTime": "2018-06-26T16:51:23.000Z",
+            "createdTime": "2018-06-26T16:51:23Z",
             "fields": {
                 "Surf Break": [
                     "Point Break"
@@ -149,7 +149,7 @@
         },
         {
             "id": "recH2ennHFNOtB1Wt",
-            "createdTime": "2018-05-31T00:16:16.000Z",
+            "createdTime": "2018-05-31T00:16:16Z",
             "fields": {
                 "Surf Break": [
                     "Point Break"
@@ -166,7 +166,7 @@
                         "id": "attmtbEOAQteRjz2p",
                         "width": 4000,
                         "height": 3000,
-                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tF9pJ4rJAs4Jo3maYHT7is35l4qGRSuiWCH8eEHtXg&s",
+                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3tF9pJ4rJAs4Jo3maYHT7is35l4qGRSuiWCH8eEHtXg\u0026s",
                         "filename": "jeremy-bishop-80371-unsplash.jpg",
                         "size": 1524876,
                         "type": "image/jpeg",
@@ -197,7 +197,7 @@
         },
         {
             "id": "recQjPx2Jzcd6xyXC",
-            "createdTime": "2018-06-26T16:54:50.000Z",
+            "createdTime": "2018-06-26T16:54:50Z",
             "fields": {
                 "Surf Break": [
                     "Outer Banks"
@@ -211,7 +211,7 @@
                         "id": "attVTomHPtusQnrC7",
                         "width": 4445,
                         "height": 2969,
-                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqF366V0gBOxLxxHjDRPPFPiZkIbBr6p0anaZJKzb_zg&s",
+                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqF366V0gBOxLxxHjDRPPFPiZkIbBr6p0anaZJKzb_zg\u0026s",
                         "filename": "jens-theess-511-unsplash.jpg",
                         "size": 3312476,
                         "type": "image/jpeg",
@@ -242,16 +242,13 @@
         },
         {
             "id": "recaVkqcoBR5i4LGa",
-            "createdTime": "2018-06-26T16:49:56.000Z",
+            "createdTime": "2018-06-26T16:49:56Z",
             "fields": {
                 "Surf Break": [
                     "Reef Break"
                 ],
                 "Difficulty Level": 3,
                 "Destination": "Pasta Point",
-                "Travellers": [
-                    "recWK6tW3LZH5eeWY"
-                ],
                 "Geocode": "eyJpIjoiUGFzdGEgUG9pbnQsIE1hbGRpdmVzIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJNYWxlIE5vcnRoIEhhcmJvdXIsIEJvZHV0aGFrdXJ1ZmFhbnUgTWFndSwgTWFsw6ksIE1hbGRpdmVzIiwibGF0Ijo0LjMxNzg0MiwibG5nIjo3My41OTE3MzI5OTk5OTk5OH0sImUiOjE1MzUzMDcwMzA5MTJ9",
                 "Influencers": [
                     "recD1zp1pQYc8O7l2"
@@ -288,12 +285,15 @@
                 "Peak Surf Season Begins": "2024-04-01",
                 "Destination State/Country": "Maldives",
                 "Peak Surf Season Ends": "2024-05-31",
-                "Address": "Pasta Point, Maldives"
+                "Address": "Pasta Point, Maldives",
+                "Travellers": [
+                    "recWK6tW3LZH5eeWY"
+                ]
             }
         },
         {
             "id": "recdXZCiNLhdX6Qij",
-            "createdTime": "2018-06-26T16:43:44.000Z",
+            "createdTime": "2018-06-26T16:43:44Z",
             "fields": {
                 "Surf Break": [
                     "Point Break"
@@ -307,7 +307,7 @@
                         "id": "attzGSzbftLhEkD7Y",
                         "width": 4881,
                         "height": 3254,
-                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOE641YKefX5Qz0w3jwqRyFGcfmYNdKgs_KIPauX1uA&s",
+                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOE641YKefX5Qz0w3jwqRyFGcfmYNdKgs_KIPauX1uA\u0026s",
                         "filename": "troy-williams-532798-unsplash 2.jpg",
                         "size": 2667269,
                         "type": "image/jpeg",
@@ -338,7 +338,7 @@
         },
         {
             "id": "reclKLPiCzzR93qlA",
-            "createdTime": "2018-06-26T16:49:46.000Z",
+            "createdTime": "2018-06-26T16:49:46Z",
             "fields": {
                 "Surf Break": [
                     "Beach Break"
@@ -387,7 +387,7 @@
         },
         {
             "id": "reco8lsDeMABqnxdJ",
-            "createdTime": "2021-04-29T12:50:33.000Z",
+            "createdTime": "2021-04-29T12:50:33Z",
             "fields": {
                 "Surf Break": [
                     "Point Break"
@@ -405,7 +405,7 @@
                         "id": "att3tcrmS5EwDhGAC",
                         "width": 3000,
                         "height": 2000,
-                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz-HAycEg-U8JVA4R2f0oLaVN0ZGCGpoLJ3Ou1x8oiRg&s",
+                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz-HAycEg-U8JVA4R2f0oLaVN0ZGCGpoLJ3Ou1x8oiRg\u0026s",
                         "filename": "YzqA020RRLaTyAZAta9g_brandon-compagne-308937-unsplash.jpg",
                         "size": 1494974,
                         "type": "image/jpeg",
@@ -436,7 +436,7 @@
         },
         {
             "id": "recwwlw5jZOLaNxty",
-            "createdTime": "2018-06-26T16:45:15.000Z",
+            "createdTime": "2018-06-26T16:45:15Z",
             "fields": {
                 "Surf Break": [
                     "Reef Break"
@@ -483,6 +483,6 @@
                 "Peak Surf Season Ends": "2024-09-01",
                 "Address": "The Bubble, Fuerteventura, Canary Islands"
             }
-        }
+        } 
     ]
 }

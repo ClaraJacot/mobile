@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.cosurf.model.data.Welcome
 import com.example.cosurf.ui.theme.CosurfTheme
+import com.example.cosurf.view.AddSpotForm
 import com.example.cosurf.view.AllSurfSpots
 import com.example.cosurf.view.SpotItem
 
@@ -30,6 +31,13 @@ fun MyMainScreen(navController: NavHostController, surfSpotState: Welcome?) {
                         onBackClicked = { navController.popBackStack() }
                     )
                 }
+            }
+        }
+        composable("addSpotForm") {
+            CosurfTheme {
+                AddSpotForm(
+                    navController = navController,
+                    onBackClicked = { navController.popBackStack() })
             }
         }
     }
